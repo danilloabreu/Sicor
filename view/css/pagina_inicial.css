@@ -1,0 +1,39 @@
+table tbody,th,td,tr{
+    
+    border: solid black 1px;
+    padding: 5px;
+   
+}
+
+table{
+    
+    margin-right: 10px;
+    margin-top:5px;
+    vertical-align: top;
+    display: inline-block;
+    width: auto;
+    overflow: auto;
+    white-space: nowrap;
+    
+    
+}
+
+.vendido{
+    
+   background-color: red;
+    
+}
+
+.proposta{
+    background-color:yellow;
+}
+
+.disponivel{
+    
+    
+}
+
+
+.content{
+    white-space: nowrap;
+}
