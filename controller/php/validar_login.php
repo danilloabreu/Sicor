@@ -1,33 +1,44 @@
 <?php 
-//require_once ("conexao.php");
-require_once ("../../util/log.php");
+
+$path = $_SERVER['DOCUMENT_ROOT'];
+require_once($path."/sicor/controller/php/conexao.php");
+require_once ($path."/sicor/util/log.php");
 
  $usuario =    $_POST['usuario'];
  $entrar =     $_POST['entrar'];
- $senha = 	$_POST['senha'];
+ $senha =      $_POST['senha'];
  
-  
-//echo $usuario;
-//echo $senha;
-
-$connect = mysql_connect('127.0.0.1','root','');
-$db = mysql_select_db('sicor');
-    if (isset($entrar)) {
-        $mensagem= "Tentativa de login: ".$usuario." senha: ".$senha;
-        salvaLog($mensagem);
+ 
+ $sql="SELECT * FROM usuario where nome = '$usuario' AND senha = $senha";
+    //inicia a conexão com o banco
+    $query =$conexao->stmt_init();    
+    //testa se o query está correto
+    if($query=$conexao->prepare($sql)){
+        try{            
+        //executa a query          
+        $resultado=$query->execute();
+        $query->store_result();
         
-      $verifica = mysql_query("SELECT * FROM usuario WHERE nome = '$usuario' AND senha = '$senha'") or die("erro ao selecionar");
-        if (mysql_num_rows($verifica)<=0){
-          //echo"<script language='javascript' type='text/javascript'>alert('Login e/ou senha incorretos');window.location.href='formulario_login.html';</script>";
-          echo false;
-            die();
+        //testa o resultado
+               if (!$resultado) {
+               $message  = 'Invalid query: ' . $conexao->error . "\n";
+               die($message);
+                }
+         if ($query->num_rows<=0){
+            echo false;
+            die("Não tem esse resultado");
         }else{
           setcookie("usuario",$usuario,0,"/");
-          //header("Location:pagina_inicial.php");
           $mensagem= "Sucesso no login: ".$usuario." senha: ".$senha;
           salvaLog($mensagem);
-          echo true;
-          
-        }
-    }
-?>
+          echo (true);
+        }//fim do else
+        }//fim do try
+        catch(Exception $e){
+                echo "Problema";
+                }//fim do catch
+        }else{
+            echo "Há um problema com a sintaxe inicial da query SQL";
+             }//fim do else
+    $query->close();
+    $conexao->close();

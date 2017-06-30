@@ -23,7 +23,7 @@ $query =$conexao->stmt_init();
             
     
             
-                $aux=1;
+               
             while ($query->fetch()) {    
                 
                  
@@ -34,7 +34,7 @@ $query =$conexao->stmt_init();
                     . "<td>".$lote."</td>"
                     . "<td><i <class=\"fa fa-pencil alterar\" aria-hidden=\"true\"></i><i class=\"fa fa-trash-o excluir\" aria-hidden=\"true\"></i></td>"
                     . "</tr>";
-                    $aux++;
+    
                     }//fim do laço while
             
         
