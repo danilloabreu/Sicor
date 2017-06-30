@@ -1,14 +1,9 @@
-
-
-table tbody,th,td,tr{
-    
-    border: solid black 1px;
-    padding: 5px;
-   
+table tbody,th,td,tr{  
+border: 1px solid #BFBFBF;
+padding: 5px;  
 }
 
 table{
-    
     margin-right: 10px;
     margin-top:5px;
     margin-bottom: 20px;
@@ -16,15 +11,11 @@ table{
     display: inline-block;
     width: auto;
     overflow: auto;
-    white-space: nowrap;
-    
-    
+    white-space: nowrap;  
 }
 
-.vendido{
-    
-   background-color: red;
-    
+.vendido{  
+   background-color: red;  
 }
 
 .proposta{
@@ -33,9 +24,7 @@ table{
 
 .disponivel{
     
-    
 }
-
 
 .content{
     white-space: nowrap;

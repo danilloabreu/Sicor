@@ -1,0 +1,30 @@
+.fa{
+    
+    margin-left: 5px;
+}
+
+.fa-check-circle-o{  
+     color:green;
+}
+
+.fa-times-circle-o{
+    color:red;
+}
+
+.fa-address-card-o{
+    
+    color:blue;
+}
+
+.fa:hover{
+    cursor:pointer;
+    
+}
+
+table, tr, td, th{
+ margin-left: auto;
+ margin-right: auto;
+ border: 1px solid #BFBFBF;
+padding:1px; 
+ 
+}

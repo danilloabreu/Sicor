@@ -46,19 +46,19 @@ DELETE FROM `lote`;
 /*!40000 ALTER TABLE `lote` DISABLE KEYS */;
 INSERT INTO `lote` (`id`, `area`, `quadra`, `lote`, `status`) VALUES
 	(1, 394, 1, 1, 2),
-	(2, 300, 1, 2, 0),
-	(3, 300, 1, 3, 0),
+	(2, 300, 1, 2, 1),
+	(3, 300, 1, 3, 2),
 	(4, 300, 1, 4, 0),
 	(5, 300, 1, 5, 0),
 	(6, 300, 1, 6, 0),
 	(7, 300, 1, 7, 0),
 	(8, 300, 1, 8, 0),
 	(9, 383, 1, 9, 0),
-	(10, 300, 1, 10, 0),
+	(10, 300, 1, 10, 2),
 	(11, 300, 1, 11, 0),
 	(12, 300, 1, 12, 0),
 	(13, 300, 1, 13, 0),
-	(14, 300, 1, 14, 0),
+	(14, 300, 1, 14, 2),
 	(15, 300, 1, 15, 0),
 	(16, 300, 1, 16, 0),
 	(17, 300, 1, 17, 0),
@@ -66,8 +66,8 @@ INSERT INTO `lote` (`id`, `area`, `quadra`, `lote`, `status`) VALUES
 	(19, 476, 2, 1, 0),
 	(20, 300, 2, 2, 0),
 	(21, 300, 2, 3, 0),
-	(22, 300, 2, 4, 2),
-	(23, 300, 2, 5, 2),
+	(22, 300, 2, 4, 0),
+	(23, 300, 2, 5, 0),
 	(24, 300, 2, 6, 0),
 	(25, 300, 2, 7, 0),
 	(26, 300, 2, 8, 0),
@@ -220,7 +220,7 @@ INSERT INTO `lote` (`id`, `area`, `quadra`, `lote`, `status`) VALUES
 	(173, 300, 12, 14, 0),
 	(174, 300, 12, 15, 0),
 	(175, 300, 12, 16, 0),
-	(176, 411, 12, 17, 0);
+	(176, 411, 12, 17, 2);
 /*!40000 ALTER TABLE `lote` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela sicor.reserva
@@ -235,7 +235,7 @@ CREATE TABLE IF NOT EXISTS `reserva` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Reservas de lotes';
 
--- Copiando dados para a tabela sicor.reserva: ~1 rows (aproximadamente)
+-- Copiando dados para a tabela sicor.reserva: ~0 rows (aproximadamente)
 DELETE FROM `reserva`;
 /*!40000 ALTER TABLE `reserva` DISABLE KEYS */;
 INSERT INTO `reserva` (`id`, `quadra`, `lote`, `date_insert`, `data_update`, `status`, `is_finished`) VALUES
@@ -252,14 +252,15 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   PRIMARY KEY (`idusuario`),
   UNIQUE KEY `nome_UNIQUE` (`nome`),
   UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=latin1 COMMENT='Tabela de Registro de usurios';
+) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=latin1 COMMENT='Tabela de Registro de usurios';
 
--- Copiando dados para a tabela sicor.usuario: ~2 rows (aproximadamente)
+-- Copiando dados para a tabela sicor.usuario: ~3 rows (aproximadamente)
 DELETE FROM `usuario`;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
 INSERT INTO `usuario` (`idusuario`, `nome`, `senha`, `email`, `deleted`) VALUES
 	(47, 'Andre', '1234', 'andre@quilombonet.com.br', NULL),
-	(48, 'Carlos', '1234', 'carlos@quilombonet.com.br', NULL);
+	(48, 'Carlos', '1234', 'carlos@quilombonet.com.br', NULL),
+	(49, 'Ana', '1234', '', NULL);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

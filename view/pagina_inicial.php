@@ -14,7 +14,7 @@ require_once($path.'/sicor/model/usuario.php');
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script type="text/javascript" src="/sicor/controller/js/base.js"></script> 
         <meta charset="utf-8">
-        <meta http-equiv="refresh" content=""/>
+        <meta http-equiv="refresh" content="5"/>
         
         <title>Sistema de Reservas - <?php echo usuario::recupera_usuario_cookie() ?> </title>
     </head>

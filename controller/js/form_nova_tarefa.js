@@ -293,7 +293,7 @@ $(document).ready(function(){
                         return;
                     }
             });//fim da função post
-    });//fim da função clique alterar tarefa
+//    });//fim da função clique alterar tarefa
     
 });//fim da função ready
 
