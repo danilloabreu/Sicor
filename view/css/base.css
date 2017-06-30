@@ -52,11 +52,13 @@ a:hover, a:active, a:focus { /* esse grupo de seletores dará ao navegador que e
 
 /* ~~ O rodapé ~~ */
 .footer {
+margin-top: 50px;
 padding: 0px 0;
 background: #a9b0bc;
 text-align:center;
 width: 100%;
-
+position: absolute;
+bottom: 0;
 }
 
 /* ~~ flutuações diversas/limpeza de classes ~~ */

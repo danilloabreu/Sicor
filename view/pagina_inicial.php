@@ -6,6 +6,7 @@ require_once($path.'/sicor/model/usuario.php');
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="icon" type="image/ico" href="/sicor/view/img/favicon.ico">
         <link rel="stylesheet" type="text/css" href="/sicor/view/css/reset.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="/sicor/view/css/base.css">
@@ -13,7 +14,8 @@ require_once($path.'/sicor/model/usuario.php');
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script type="text/javascript" src="/sicor/controller/js/base.js"></script> 
         <meta charset="utf-8">
-        <meta http-equiv="refresh" content="5"/>
+        <meta http-equiv="refresh" content=""/>
+        
         <title>Sistema de Reservas - <?php echo usuario::recupera_usuario_cookie() ?> </title>
     </head>
     <body>

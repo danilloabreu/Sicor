@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `lote` (
   `lote` int(11) NOT NULL DEFAULT '0',
   `status` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabela de lotes';
+) ENGINE=InnoDB AUTO_INCREMENT=177 DEFAULT CHARSET=latin1 COMMENT='Tabela de lotes';
 
 -- Copiando dados para a tabela sicor.lote: ~176 rows (aproximadamente)
 DELETE FROM `lote`;
@@ -222,6 +222,25 @@ INSERT INTO `lote` (`id`, `area`, `quadra`, `lote`, `status`) VALUES
 	(175, 300, 12, 16, 0),
 	(176, 411, 12, 17, 0);
 /*!40000 ALTER TABLE `lote` ENABLE KEYS */;
+
+-- Copiando estrutura para tabela sicor.reserva
+CREATE TABLE IF NOT EXISTS `reserva` (
+  `id` int(11) NOT NULL,
+  `quadra` int(11) NOT NULL,
+  `lote` int(11) NOT NULL,
+  `date_insert` int(11) NOT NULL,
+  `data_update` int(11) DEFAULT NULL,
+  `status` int(11) DEFAULT NULL COMMENT '0 - aguardando ; 1-aceita; 2-rejeitada',
+  `is_finished` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Reservas de lotes';
+
+-- Copiando dados para a tabela sicor.reserva: ~1 rows (aproximadamente)
+DELETE FROM `reserva`;
+/*!40000 ALTER TABLE `reserva` DISABLE KEYS */;
+INSERT INTO `reserva` (`id`, `quadra`, `lote`, `date_insert`, `data_update`, `status`, `is_finished`) VALUES
+	(0, 1, 1, 0, NULL, 0, 0);
+/*!40000 ALTER TABLE `reserva` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela sicor.usuario
 CREATE TABLE IF NOT EXISTS `usuario` (

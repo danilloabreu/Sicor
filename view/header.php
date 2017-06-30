@@ -9,7 +9,7 @@
                                     <li><a href="#"id="rastrear_tarefa">Rastrear tarefas solicitadas</a></li></ul></li>
                             <li><a href="#">Reservas</a>
                                 <ul>
-                                    <li><a href="/sicor/view/page/page_movimento_pendente.php" id="ver_movimento_pendente">Ver movimentos pendentes</a></li></ul></li>
+                                    <li><a href="/sicor/view/page/page_reserva.php">Verificar reservas</a></li></ul></li>
                             <!--<li><a href="#">Sobre</a></li>-->
                             <li><a >Mapa do Loteamento </a>
                                 <ul>
