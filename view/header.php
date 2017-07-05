@@ -11,6 +11,8 @@
                                 <li><a href="/sicor/files/mapa.pdf">Mapa em PDF</a></li>                    
                                 </ul>
                             </li>
+                            <li><a href="/sicor/view/page/page_simulador.php">Simulador</a>
+                            </li>
                             <li>
                              <a href="#">Administração </a>
                                 <ul>
