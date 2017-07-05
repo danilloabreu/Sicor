@@ -11,11 +11,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
-
--- Copiando estrutura do banco de dados para sicor
-CREATE DATABASE IF NOT EXISTS `sicor` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `sicor`;
-
 -- Copiando estrutura para tabela sicor.logs
 CREATE TABLE IF NOT EXISTS `logs` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -254,7 +249,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   UNIQUE KEY `email_UNIQUE` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=latin1 COMMENT='Tabela de Registro de usurios';
 
--- Copiando dados para a tabela sicor.usuario: ~3 rows (aproximadamente)
+-- Copiando dados para a tabela sicor.usuario: ~2 rows (aproximadamente)
 DELETE FROM `usuario`;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
 INSERT INTO `usuario` (`idusuario`, `nome`, `senha`, `email`, `deleted`) VALUES

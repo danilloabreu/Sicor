@@ -7,13 +7,17 @@ require ($path.'/sicor/controller/php/conexao.php');
 
 /*Variáveis*/
 
-$quadra=$_POST["quadra"];
-$lote=$_POST["lote"];
-$status=$_POST["status"];
+//$quadra=$_POST["quadra"];
+//$lote=$_POST["lote"];
+//$status=$_POST["status"];
+
+$quadra=1;
+$lote=1;
+$status=2;
 
 $query =$conexao->stmt_init();    
         //testa se o query está correto
-        if($query=$conexao->prepare("UPDATE sicor.lote SET status='$status' WHERE  quadra='$quadra' AND lote=$lote")){
+        if($query=$conexao->prepare("UPDATE lote SET status='$status' WHERE  quadra='$quadra' AND lote=$lote")){
             //passando variaveis para a query
             try{            
                        

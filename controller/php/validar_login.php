@@ -9,7 +9,7 @@ require_once ($path."/sicor/util/log.php");
  $senha =      $_POST['senha'];
  
  
- $sql="SELECT * FROM usuario where nome = '$usuario' AND senha = $senha";
+ $sql="SELECT * FROM usuario WHERE nome ='$usuario' AND senha='$senha'";
     //inicia a conexão com o banco
     $query =$conexao->stmt_init();    
     //testa se o query está correto
@@ -33,12 +33,15 @@ require_once ($path."/sicor/util/log.php");
           salvaLog($mensagem);
           echo (true);
         }//fim do else
+        
+         $query->close();
+         $conexao->close();
         }//fim do try
+        
         catch(Exception $e){
                 echo "Problema";
                 }//fim do catch
         }else{
             echo "Há um problema com a sintaxe inicial da query SQL";
              }//fim do else
-    $query->close();
-    $conexao->close();
+   
