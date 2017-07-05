@@ -13,7 +13,7 @@ $query =$conexao->stmt_init();
         //executa a query          
         $resultado=$query->execute();
         //desenha o cabeçalho da tabela
-        $tabela= "<table><tr><th>Quadra</th><th>Lote</th><th>Situação</th><th>Ação</th></tr>";
+        $tabela= "<table><thead><tr><th>Quadra</th><th>Lote</th><th>Situação</th><th>Ação</th></tr></thead>";
         $query->bind_result($quadra,$lote,$status);
         $linha=1;
             while ($query->fetch()) {
@@ -29,7 +29,7 @@ $query =$conexao->stmt_init();
                     break;
                 }//fim do switch
 
-            $tabela.="<tr>"
+            $tabela.="<tr quadra=\"$quadra\" class='quadra-linha' linha=\"$linha\">"
             . "<td class='quadra' linha=\"$linha\">".$quadra."</td>"
             . "<td class='lote' linha=\"$linha\">".$lote."</td>"
             . "<td class='status' linha=\"$linha\">".$status."</td>"
@@ -53,5 +53,5 @@ $query =$conexao->stmt_init();
         }else{
             echo "Há um problema com a sintaxe inicial da query SQL";
              }
-          
+$tabela.="</table>";          
 echo $tabela;

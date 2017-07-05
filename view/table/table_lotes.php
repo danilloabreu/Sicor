@@ -3,7 +3,6 @@
 function tabelaLotes($chamadaQuadra){
 
 $path = $_SERVER['DOCUMENT_ROOT'];
-
 require ($path.'/sicor/controller/php/conexao.php');
 //require_once ($path.'/sitar/model/usuario.php');
 //require_once ($path.'/sitar/model/br.com.sitar.Tarefa/br.com.sitar.Tarefa.php');
@@ -11,9 +10,8 @@ require ($path.'/sicor/controller/php/conexao.php');
 //$destinatario=Usuario::recupera_usuario_cookie();
 
 $query =$conexao->stmt_init();  
-$sql="SELECT lote.quadra, lote.lote, lote.area, lote.status FROM sicor.lote WHERE lote.quadra=$chamadaQuadra";
-//$sql="SELECT idmovimento,idtarefa,emissor,descricao,datainicio,datalimite FROM movimento WHERE destinatario = ? AND finished IS NULL";
-//$sql="SELECT * FROM movimento WHERE destinatario = ? AND finished IS NULL";
+$sql="SELECT quadra, lote, area, status FROM lote WHERE quadra=$chamadaQuadra";
+
 //testa se o query está correto
         
     if($query=$conexao->prepare($sql)){
@@ -46,7 +44,7 @@ $sql="SELECT lote.quadra, lote.lote, lote.area, lote.status FROM sicor.lote WHER
             }
                 
                 $tabela.="<tr class=\"$status\"><td>".$lote."</td>"
-                        . "<td>".$area."</td>";
+                        . "<td>".$area."</td></tr>";
             } 
            //testa o resultado
             if (!$resultado) {
@@ -63,7 +61,7 @@ $sql="SELECT lote.quadra, lote.lote, lote.area, lote.status FROM sicor.lote WHER
     }else{
         echo "Há um problema com a sintaxe inicial da query SQL";
     }
-             
+$tabela.="</table>";             
 echo $tabela;
 
 }

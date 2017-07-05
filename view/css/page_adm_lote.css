@@ -21,10 +21,61 @@
     
 }
 
-table, tr, td, th{
+tr, td, th{
  margin-left: auto;
  margin-right: auto;
  border: 1px solid #BFBFBF;
-padding:1px; 
+ padding:3px;
+ border-collapse: collapse;
+
  
+}
+
+select{
+    margin-bottom: 20px;
+    margin-left:20px;
+}
+span{
+    margin-left:20px;
+}
+
+.adm-lote{
+    display: inline-block;
+    text-align: left;
+    /*background-color:red;*/
+    width: auto;
+    white-space: nowrap;
+    
+}
+
+.content{
+    display: inline-block;
+    margin-left: 20px;
+    border-collapse: collapse;
+    /*background-color: purple;*/
+    width: 100%;
+    text-align: left;
+}
+table{
+    margin-left: 20px;
+    margin-right: 20px;
+    border-collapse: collapse;
+    display: inline-block;
+}
+
+.quadro-resumo{
+    /*background-color: blue;*/
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20%;
+    border: 1px solid black;
+    padding: 5px;
+    margin-top: 1em;
+    font-size: 300%;
+    text-align: center;
+}
+
+.quadro-resumo p {
+    
+    margin-top: 20px;
 }

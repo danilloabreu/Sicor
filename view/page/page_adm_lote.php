@@ -1,6 +1,18 @@
 <?php
 $path = $_SERVER['DOCUMENT_ROOT'];
 require_once ($path.'/sicor/model/usuario.php');
+require_once ($path.'/sicor/controller/php/function.php');
+
+if(session_id() == '' || !isset($_SESSION)) {
+    // session isn't started
+    session_start();
+}
+
+        
+if($_SESSION['nivel']!=5){
+die("Não autorizado");   
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +23,6 @@ require_once ($path.'/sicor/model/usuario.php');
         <link rel="stylesheet" type="text/css" href="/sicor/view/css/base.css">
         <link rel="stylesheet" type="text/css" href="/sicor/view/css/page_adm_lote.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script type="text/javascript" src="/sicor/controller/js/base.js"></script>
         <script type="text/javascript" src="/sicor/controller/js/page_adm_lote.js"></script> 
         <meta charset="utf-8">
         <meta http-equiv="refresh" content=""/>
@@ -20,12 +31,17 @@ require_once ($path.'/sicor/model/usuario.php');
     <body>
         <?php require_once($path.'/sicor/view/header.php'); ?>
         <main>
-            <div class="content">           
-    <?php
-    require_once($path.'/sicor/view/table/table_adm_lote.php');                      
-    ?>
-</div>
+            <div class="content">
+                <div class="adm-lote">
+                <span>Quadra </span><?php htmlSelect(12,"select-quadra");?>
+                <br>
+    <?php require_once($path.'/sicor/view/table/table_adm_lote.php');?>
+                </div> 
+                <div class="quadro-resumo"><?php require $path.'/sicor/view/frame/resumo_venda.php'; ?></div>
+         </div>
         </main>
+           
+            
         <?php //require_once($path.'/sicor/view/footer.php'); ?>     
         
     </body>
