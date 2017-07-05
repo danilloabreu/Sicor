@@ -11,6 +11,11 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
+
+-- Dumping database structure for sicor
+CREATE DATABASE IF NOT EXISTS `sicor` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `sicor`;
+
 -- Dumping structure for table sicor.logs
 CREATE TABLE IF NOT EXISTS `logs` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -38,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `lote` (
 
 -- Dumping data for table sicor.lote: ~176 rows (approximately)
 /*!40000 ALTER TABLE `lote` DISABLE KEYS */;
-INSERT IGNORE INTO `lote` (`id`, `area`, `quadra`, `lote`, `status`, `valor`) VALUES
+REPLACE INTO `lote` (`id`, `area`, `quadra`, `lote`, `status`, `valor`) VALUES
 	(1, 394, 1, 1, 0, 147000),
 	(2, 300, 1, 2, 0, 30000),
 	(3, 300, 1, 3, 2, 15000),
@@ -231,7 +236,7 @@ CREATE TABLE IF NOT EXISTS `reserva` (
 
 -- Dumping data for table sicor.reserva: ~1 rows (approximately)
 /*!40000 ALTER TABLE `reserva` DISABLE KEYS */;
-INSERT IGNORE INTO `reserva` (`id`, `quadra`, `lote`, `date_insert`, `data_update`, `status`, `is_finished`) VALUES
+REPLACE INTO `reserva` (`id`, `quadra`, `lote`, `date_insert`, `data_update`, `status`, `is_finished`) VALUES
 	(0, 1, 1, 0, NULL, 0, 0);
 /*!40000 ALTER TABLE `reserva` ENABLE KEYS */;
 
@@ -250,7 +255,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 
 -- Dumping data for table sicor.usuario: ~6 rows (approximately)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT IGNORE INTO `usuario` (`idusuario`, `nome`, `senha`, `email`, `deleted`, `nivel`) VALUES
+REPLACE INTO `usuario` (`idusuario`, `nome`, `senha`, `email`, `deleted`, `nivel`) VALUES
 	(47, 'Andre', '1234', 'andre@quilombonet.com.br', NULL, 0),
 	(48, 'Carlos', '1234', 'carlos@quilombonet.com.br', NULL, 0),
 	(49, 'Danilo', '1234', '', NULL, 0),
