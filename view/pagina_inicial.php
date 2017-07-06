@@ -12,9 +12,9 @@ require_once($path.'/sicor/model/usuario.php');
         <link rel="stylesheet" type="text/css" href="/sicor/view/css/base.css">
         <link rel="stylesheet" type="text/css" href="/sicor/view/css/pagina_inicial.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script type="text/javascript" src="/sicor/controller/js/base.js"></script> 
+        <script type="text/javascript" src="/sicor/controller/js/pagina_inicial.js"></script> 
         <meta charset="utf-8">
-        <meta http-equiv="refresh" content="5"/>
+       
         
         <title>Sistema de Reservas - <?php echo usuario::recupera_usuario_cookie() ?> </title>
     </head>
@@ -40,6 +40,7 @@ require_once($path.'/sicor/model/usuario.php');
 </div>
         </main>
         <?php //require_once($path.'/sicor/view/footer.php'); ?>     
-        
+        <input type="hidden" class="checksum_estatico">
+        <input type="hidden" class="checksum_variavel">
     </body>
 </html>

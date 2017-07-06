@@ -185,9 +185,13 @@ $(document).on('blur','.entrada-valor',function(){
         $(".entrada-valor").val(dezporcento.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2}));
         return;
         }    
-                                                      
-                
-                
+   
+    alert(getLoteValorNegociacao());
+    alert(getEntradaValor());
+   var a=getLoteValorNegociacao();
+   var b=getEntradaValor();
+   var saldoafinanciar= Number(a)-Number(b);             
+   alert("Saldo a Financiar "+saldoafinanciar);             
                 
     atualizaEmolumento(vendaValor,entradaValor,111);
     });//fim da função focus-out   
@@ -209,12 +213,9 @@ $(document).on('change','.entrada-numparcela',function(){
     });//fim da função change .entrada-numparcela
        
 $(document).on('click','.gerarproposta',function(){
-    //alert("Passou");
     
-    alert(format(getEntradaValor()));
     
-    return;
-    
+      
     var vendaValor=toFloat($(".lote-valornegociacao").val());
     var valorTabela=toFloat($(".lote-valor").html());
     var quadra=$(".select-quadra").val();
@@ -234,11 +235,28 @@ $(document).on('click','.gerarproposta',function(){
     
     
     
-   // alert(toFloat($(".lote-valornegociacao").val()));
-    //alert($(".lote-valornegociacao").val());
+   
+    var quadra=$('.lote-quadra').html();
+    var lote=$('.lote-lote').html();
+    var valornegociacao=$(".lote-valornegociacao").val();
+    var entradatotal=$(".entrada-total").html();
+    var entradaparcela=$(".entrada-numparcela").val();
+    var entradavencimento=$(".entrada-vencimento").val();
+    var valorparcelaentrada=$(".parcela-total").html();
+    var documentacao=$(".entrada-documentacao").html();
+    var entradavencimento=$(".entrada-primeirovencimento").val();
+    var numparcelafinanciamento=$(".fin-numparcela").val();
+    var totalparcela=$(".fin-totalparcela").val();
     
-    var get="quadra="+quadra+"&lote="+lote;
-    $(this).attr("href", "/sicor/controller/php/gerar_proposta_pdf.php?"+get);
+    
+    var get="quadra="+quadra+"&lote="+lote+"&valornegociacao="+valornegociacao+"&entradatotal="+entradatotal+"&entradaparcela="+entradaparcela;
+    get=get+"&valorparcelaentrada="+valorparcelaentrada+"&documentacao="+documentacao+"&entradavencimento="+entradavencimento;
+    get=get+"&numparcelafinanciamento="+numparcelafinanciamento+"&totalparcela="+totalparcela;
+    alert (get);
+    //return;
+    
+    //$(this).attr("href", "/sicor/controller/php/gerar_proposta_pdf.php?"+get);
+    $(this).attr("href", "/sicor/view/page/espelho_proposta_1.php?"+get);
                 
     });//fim da função gerar PDF
 //quando o valor do lote perde o foco   

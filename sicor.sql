@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
 -- Server version:               10.1.21-MariaDB - mariadb.org binary distribution
@@ -267,3 +268,6 @@ REPLACE INTO `usuario` (`idusuario`, `nome`, `senha`, `email`, `deleted`, `nivel
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+=======
+checksum table 'sicor.usuario'
+>>>>>>> 84009476276088fe7c43b69eb5ff1e06f6fbdd9c

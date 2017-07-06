@@ -2,6 +2,8 @@
 $path = $_SERVER['DOCUMENT_ROOT'];
 require_once ($path.'/sicor/model/usuario.php');
 require_once ($path.'/sicor/controller/php/function.php');
+
+
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +20,7 @@ require_once ($path.'/sicor/controller/php/function.php');
   integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
   crossorigin="anonymous"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.js"></script>
-        <script type="text/javascript" src="/sicor/controller/js/base.js"></script>
+        
         <script type="text/javascript" src="/sicor/controller/js/page_simulador.js"></script>
         <meta charset="utf-8">
         
@@ -82,7 +84,7 @@ require_once ($path.'/sicor/controller/php/function.php');
                         <tr><td>Valor das parcelas</td><td><span>R$</span><span class="fin-valorparcela"></span></td></tr>
                         <tr><td>Seguro</td><td><span>R$</span><span class="fin-valorseguro"></span></td></tr>
                         <tr><td>Taxa de Administração</td><td><span>R$</span><span class="fin-valortxadm"></span></td></tr>
-                        <tr><td>Total da Parcela</td><td><span>R$ </span>37.500,00</td></tr>
+                        <tr><td>Total da Parcela</td><td><span>R$ </span><span class="fin-totalparcela"><span></td></tr>
                         <tr><td>Primeiro Vencimento</td><td ><input type="date"></td></tr>
                         <tr><td>Ultimo Vencimento</td><td>01/07/2017</td></tr>
                     </table>

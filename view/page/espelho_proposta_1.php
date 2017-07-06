@@ -3,17 +3,85 @@
 $path = $_SERVER['DOCUMENT_ROOT'];
 require ($path.'/sicor/util/extenso.php');
 
-$quadra=$_GET["quadra"];
-$lote=$_GET["lote"];
-//$quadra=1;
-//$lote=1;
-$valor=157500.79;
-$entradaTotal=21557.33;
-$entradaParcelaNum=1;
-$entradaParcelaValor=587.00;
-$entradaVencimento="01/02/1990";
-$emolumento=600.00;
-$finParcelaNum=2;
+
+
+
+//$entradaparcela=$_GET['entradaparela'];
+//$entradavencimento=$_GET['entradavencimento'];
+
+if (isset($_GET['quadra'])){
+    $quadra=$_GET['quadra'];
+}else{
+    $quadra="PROPOSTA INVALIDA";
+}
+
+if (isset($_GET['lote'])){
+    $lote=$_GET['lote'];
+}else{
+    $lote="PROPOSTA INVALIDA";
+}
+
+if (isset($_GET['valornegociacao'])){
+    $valor=$_GET['valornegociacao'];
+    $valor=str_replace('.','',$valor);
+    $valor=str_replace(',','.',$valor);
+}else{
+    $valor="PROPOSTA INVALIDA";
+}
+
+if (isset($_GET['entradatotal'])){
+    $entradaTotal=$_GET['entradatotal'];
+    $entradaTotal=str_replace('.','',$entradaTotal);
+    $entradaTotal=str_replace(',','.',$entradaTotal);
+   
+}else{
+    $valor="PROPOSTA INVALIDA";
+}
+
+if (isset($_GET['entradaparcela'])){
+    $entradaParcelaNum=$_GET['entradaparcela'];
+}else{
+    $entradaParcelaNum="PROPOSTA INVALIDA";
+}
+
+
+if (isset($_GET['valorparcelaentrada'])){
+    $entradaParcelaValor=$_GET['valorparcelaentrada'];
+    $entradaParcelaValor=str_replace('.','',$entradaParcelaValor);
+    $entradaParcelaValor=str_replace(',','.',$entradaParcelaValor);
+}else{
+    $entradaParcelaValor="PROPOSTA INVALIDA";
+}
+
+if (isset($_GET['documentacao'])){
+    $emolumento=$_GET['documentacao'];
+    $emolumento=str_replace('.','',$emolumento);
+    $emolumento=str_replace(',','.',$emolumento);
+   
+}else{
+    $emolumento="PROPOSTA INVALIDA";
+}
+
+if (isset($_GET['entradavencimento'])){
+    $entradaVencimento=$_GET['entradavencimento'];
+    
+}else{
+    $entradaVencimento="PROPOSTA INVALIDA";
+}
+
+if (isset($_GET['numparcelafinanciamento'])){
+    $finParcelaNum=$_GET['numparcelafinanciamento'];
+}else{
+    $finParcelaNum="PROPOSTA INVALIDA";
+}
+
+if (isset($_GET['totalparcela'])){
+    $finParcelaValor=$_GET['totalparcela'];
+}else{
+    $finParcelaValor="PROPOSTA INVALIDA";
+}
+
+//$finParcelaNum=2;
 $finParcelaValor=450.00;
 $finParcelaVencimento="01/02/1990";
 
@@ -36,7 +104,7 @@ $finParcelaValor=number_format($finParcelaValor, 2, ',', '.');
     </head>
     <body>
         <main>
-            <h1 class="titulo">Proposta de Compra N <?php echo ("$quadra/$lote");?> </h1>
+            <h1 class="titulo">Proposta de Compra Nº <?php echo ("$quadra/$lote");?> </h1>
             <h2> A Jardim Pacaembu SPE LTDA</h2>
             <h2>Prezados Senhores</h2>
             <div class="intro">

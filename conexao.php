@@ -10,7 +10,7 @@ $senha = $xml->senha;
 $bd = $xml->bd;
 */
 //conectando ao servidor
-$conexao = mysqli_connect('127.0.0.1',"root","","sicor");     
+$conexao = mysqli_connect('127.0.0.1', "root", "","sicor");     
      
 //$conexao = mysqli_connect($host,$usuario,$senha,$bd);
 

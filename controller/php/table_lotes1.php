@@ -3,11 +3,8 @@
 function tabelaLotes($chamadaQuadra){
 
 $path = $_SERVER['DOCUMENT_ROOT'];
-require ($path.'/sicor/controller/php/conexao.php');
-//require_once ($path.'/sitar/model/usuario.php');
-//require_once ($path.'/sitar/model/br.com.sitar.Tarefa/br.com.sitar.Tarefa.php');
 
-//$destinatario=Usuario::recupera_usuario_cookie();
+require ($path.'/sicor/controller/php/conexao.php');
 
 $query =$conexao->stmt_init();  
 $sql="SELECT quadra, lote, area, status FROM lote WHERE quadra=$chamadaQuadra";
@@ -24,11 +21,7 @@ $sql="SELECT quadra, lote, area, status FROM lote WHERE quadra=$chamadaQuadra";
                     . "<tr><td>Lote</td>"
                     . "<td>Área</td></tr>" ;
             $query->bind_result($quadra,$lote,$area,$status);
-            
-            //$disabled="";
-            
-            
-            
+
             while ($query->fetch()) {    
                 
             switch ($status){ 
@@ -44,7 +37,7 @@ $sql="SELECT quadra, lote, area, status FROM lote WHERE quadra=$chamadaQuadra";
             }
                 
                 $tabela.="<tr class=\"$status\"><td>".$lote."</td>"
-                        . "<td>".$area."</td></tr>";
+                        . "<td>".$area."</td>";
             } 
            //testa o resultado
             if (!$resultado) {
@@ -61,7 +54,7 @@ $sql="SELECT quadra, lote, area, status FROM lote WHERE quadra=$chamadaQuadra";
     }else{
         echo "Há um problema com a sintaxe inicial da query SQL";
     }
-$tabela.="</table>";             
+             
 echo $tabela;
 
 }
