@@ -25,22 +25,22 @@ require_once($path.'/sicor/model/usuario.php');
     <?php
     require_once($path.'/sicor/view/table/table_lotes.php');   
     $chamadaQuadra=1;        tabelaLotes($chamadaQuadra);
-    //$chamadaQuadra=2;        tabelaLotes($chamadaQuadra);
-    //$chamadaQuadra=3;        tabelaLotes($chamadaQuadra);
-    //$chamadaQuadra=4;        tabelaLotes($chamadaQuadra);
-    //$chamadaQuadra=5;        tabelaLotes($chamadaQuadra);
-    //$chamadaQuadra=6;        tabelaLotes($chamadaQuadra);
-    //$chamadaQuadra=7;        tabelaLotes($chamadaQuadra);
-    //$chamadaQuadra=8;        tabelaLotes($chamadaQuadra);
-    //$chamadaQuadra=9;        tabelaLotes($chamadaQuadra);
-    //$chamadaQuadra=10;       tabelaLotes($chamadaQuadra);
-    //$chamadaQuadra=11;       tabelaLotes($chamadaQuadra);
-    //$chamadaQuadra=12;       tabelaLotes($chamadaQuadra);                   
+    $chamadaQuadra=2;        tabelaLotes($chamadaQuadra);
+    $chamadaQuadra=3;        tabelaLotes($chamadaQuadra);
+    $chamadaQuadra=4;        tabelaLotes($chamadaQuadra);
+    $chamadaQuadra=5;        tabelaLotes($chamadaQuadra);
+    $chamadaQuadra=6;        tabelaLotes($chamadaQuadra);
+    $chamadaQuadra=7;        tabelaLotes($chamadaQuadra);
+    $chamadaQuadra=8;        tabelaLotes($chamadaQuadra);
+    $chamadaQuadra=9;        tabelaLotes($chamadaQuadra);
+    $chamadaQuadra=10;       tabelaLotes($chamadaQuadra);
+    $chamadaQuadra=11;       tabelaLotes($chamadaQuadra);
+    $chamadaQuadra=12;       tabelaLotes($chamadaQuadra);                   
     ?>
 </div>
             <br>
         </main>
-        <?php require_once($path.'/sicor/view/footer.php'); ?>     
+        <?php //require_once($path.'/sicor/view/footer.php'); ?>     
         <input type="hidden" class="checksum_estatico">
         <input type="hidden" class="checksum_variavel">
     </body>

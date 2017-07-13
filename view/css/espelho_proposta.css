@@ -1,17 +1,38 @@
 body{
     background-color: white;
+    font-family: Cambria,Arial;
+    font-size: 12pt;
+    
+}
+.logo{
+    z-index:-1;
+    position:absolute;
+    width: 18cm;
+    height: 20cm;
+    border: 0px solid black;
+    margin-left: -50px;
+}
+
+.subtitulo{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.containerlogo{
+    background-color: red;
 }
 h1{
-    text-align: center;
+    text-align: right;
     margin-bottom: 1cm;
     font-size: 200%;
+    margin-right: 10%;
 }
 
 h2{
    text-align: left;
    font-size: 120%;
-    padding-left: 10px;
-    padding-bottom: 2px;
+    padding-left: 0px;
+    padding-bottom: 5px;
 }
 
 main{
