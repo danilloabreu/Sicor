@@ -17,7 +17,7 @@ $taxas=67.64;
 $emolumento=$emolumentoSaldoRestante+$emolumentoValorVenda+$itbi+$taxas;
 }
 
-$data = [ 'emolumento' => "$emolumento"];
+$data = array( 'emolumento' => "$emolumento");
     
 header('Content-type: application/json');
 echo json_encode( $data );

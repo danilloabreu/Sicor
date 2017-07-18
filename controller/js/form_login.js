@@ -43,7 +43,7 @@ $(document).ready(function(){
                         window.location.href="../pagina_inicial.php";}
                     else{
                        alert("Nome de usuário ou senha incorretos ");
-                       //alert (data);
+						alert (data);
                         $("#senha").css("background", "red");
                         $("#nome").css("background", "red");
                     }

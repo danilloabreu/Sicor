@@ -10,7 +10,7 @@ require ($path.'/sicor/controller/php/conexao.php');
 //$destinatario=Usuario::recupera_usuario_cookie();
 
 $query =$conexao->stmt_init();  
-$sql="SELECT quadra, lote, area, status FROM lote WHERE quadra=$chamadaQuadra";
+$sql="SELECT quadra, lote, area, status,comprador,corretor FROM lote WHERE quadra=$chamadaQuadra";
 
 //testa se o query está correto
         
@@ -23,7 +23,7 @@ $sql="SELECT quadra, lote, area, status FROM lote WHERE quadra=$chamadaQuadra";
                     $tabela.="<tr><td colspan=\"2\">Quadra ".$chamadaQuadra."</td></tr>"
                     . "<tr><td>Lote</td>"
                     . "<td>Área</td></tr>" ;
-            $query->bind_result($quadra,$lote,$area,$status);
+            $query->bind_result($quadra,$lote,$area,$status,$comprador,$corretor);
             
             //$disabled="";
             
@@ -43,8 +43,9 @@ $sql="SELECT quadra, lote, area, status FROM lote WHERE quadra=$chamadaQuadra";
                     break;
             }
                 
-                $tabela.="<tr class=\"$status\"><td>".$lote."</td>"
-                        . "<td>".$area."</td></tr>";
+                $tabela.="<tr class='$status'";
+                $tabela.="comprador='$comprador' corretor='$corretor'><td>$lote</td>";
+                $tabela.="<td>$area</td></tr>";
             } 
            //testa o resultado
             if (!$resultado) {

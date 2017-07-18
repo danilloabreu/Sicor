@@ -93,7 +93,7 @@ if (isset($_GET['condicao'])){
     $condicao="PROPOSTA INVALIDA";
 }
 
-
+/*
 $valor=number_format($valor, 2, ',', '.');
 
 if($condicao!=='0'){
@@ -105,7 +105,7 @@ $finParcelaValor=number_format($finParcelaValor, 2, ',', '.');
 
 
 
-
+*/
 
 /*
 $quadra=$_GET['quadra'];
@@ -126,33 +126,33 @@ $valorparcelaentrada=$GET['valorparcelaentrada'];
 //echo $get;
 
 
-
-$mpdf = new mPDF();
+//$mpdf = new mPDF();
 
 //$get="quadra=$quadra&lote=$lote&valornegociacao=$valornegociacao&entradatotal=$entradanotal&entradaparcela=$entradanarcela&entradavencimento=$entradavencimento";
 
-$pdf=file_get_contents("http://".$_SERVER[HTTP_HOST]."/sicor/view/page/espelho_proposta_1.php?$get");
+$pdf_url = "http://sicor.quilombonet.com.br/sicor/view/pagina_inicial.php";
+
+//$pdf_url = "http://sicor.quilombonet.com.br:80/sicor/view/page/espelho_proposta_1.php?$get";
+//$pdf_url = "http://".$_SERVER[HTTP_HOST]."/sicor/view/page/espelho_proposta_1.php?$get";
+$ch = curl_init();
+$timeout = 0;
+curl_setopt ($ch, CURLOPT_URL, $pdf_url);
+curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+
+// Getting binary data
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_BINARYTRANSFER, 1);
+
+$pdf = curl_exec($ch);
+curl_close($ch);
+
+//$pdf="teste";
+// display file
+echo $pdf;
+//$pdf=$file_contents;
+//$pdf=file_get_contents("http://"sicor.quilombonet.com.br/sicor/view/page/espelho_proposta_1.php?$get");
 //$pdf=file_get_contents($path.'/sicor/view/page/espelho_proposta.php');
-$mpdf->WriteHTML($pdf);
-
-$mpdf->Output('Proposta_Q'.$quadra.'L'.$lote.'.pdf','D');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//$mpdf->WriteHTML($pdf);
+//$mpdf->Output('Proposta_Q'.$quadra.'L'.$lote.'.pdf','D');
 
 ?>

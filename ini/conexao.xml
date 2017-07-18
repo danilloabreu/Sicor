@@ -1,6 +1,6 @@
 <conexao>
-<host>127.0.0.1</host>
-<usuario>root</usuario>
-<senha></senha>
-<bd>sicor</bd>
+<host>179.188.16.170</host>
+<usuario>quilombonet</usuario>
+<senha>do48soa5</senha>
+<bd>quilombosicor</bd>
 </conexao>

@@ -1,8 +1,8 @@
-<?php 
+﻿<?php 
 
 $path = $_SERVER['DOCUMENT_ROOT'];
 require_once($path."/sicor/controller/php/conexao.php");
-require_once ($path."/sicor/util/log.php");
+//require_once ($path."/sicor/util/log.php");
 
  $usuario =    $_POST['usuario'];
  $entrar =     $_POST['entrar'];
@@ -45,7 +45,7 @@ require_once ($path."/sicor/util/log.php");
           
           //setcookie("nivel",0,0,"/");
           $mensagem= "Sucesso no login: ".$usuario." senha: ".$senha;
-          salvaLog($mensagem);
+          //salvaLog($mensagem);
           echo (true);
         }//fim do else
         

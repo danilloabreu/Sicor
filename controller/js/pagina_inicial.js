@@ -1,6 +1,19 @@
 $(document).ready(function(){
 
 
+$(function() {
+            $(".vendido").tooltip({
+                track:true,
+                items: '[comprador], [corretor]',
+                content: function () {
+                return 'Comprador: ' + $(this).attr('comprador')+'<br/>Corretor: ' + $(this).attr('corretor');
+                }
+              
+            });
+            $("#tooltip-2").tooltip();
+         });
+
+
 
 function setCheckSum_v (){
     $.get('/sicor/controller/php/check_table.php', function (result){

@@ -31,9 +31,11 @@ $nivel=$_SESSION['nivel'];
                             <!--<li><a href="#">Sobre</a></li>-->
                             <li><a href="#">Arquivos Úteis</a>
                                 <ul>
-                                <li><a href="/sicor/files/mapa.pdf">Mapa em PDF</a></li>
-                                <li><a href="/sicor/files/mapa.pdf">Contrato editável</a></li>
-                                <li><a href="/sicor/files/mapa.pdf">Simulador</a></li>
+                                <li><a target="_blank" href="/sicor/files/mapa.pdf">Mapa em PDF</a></li>
+                                <li><a href="/sicor/files/PropostaAvulsa.dotx">Proposta Avulsa</a></li>
+                                <li><a href="/sicor/files/cnpj_spe.pdf">Cartão CNPJ SPE</a></li>
+                                <li><a href="#">Aprovação Graprohab</a></li>
+                                <li><a href="#">Registro da Incorporação</a></li>
                                 </ul>
                             </li>
                             <?php 
@@ -53,8 +55,21 @@ $nivel=$_SESSION['nivel'];
                             echo $cab_adm;
                             }
                             ?>
-                            <li>
-                                <a href="/sicor/view/form/form_login.html" >Sair</a>
+                            <?php if(false){
+                           $cab_calc='<li>';
+                           $cab_calc.="<a href='#' >Calculadoras</a>";
+                           $cab_calc.=" <ul>";
+                           $cab_calc.="<li><a href='/sicor/view/page/page_calculadora_parcela.php' >Parcelas</a></li>";
+                           $cab_calc.="<li><a href='/sicor/view/page/page_calculadora_parcela.php'>Emolumentos</a></li>";
+                           $cab_calc.="</ul>";
+                           $cab_cal.="</li>";
+                           echo $cab_calc;
+                           
+                            }
+                           ?>
+                                <li>
+                                <a href="/sicor/controller/php/finalizar_session.php" >Sair</a>
+                            
                             </li>                
                     </ul>             
                 </nav></div>

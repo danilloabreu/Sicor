@@ -22,7 +22,7 @@ body{
     background-color: red;
 }
 h1{
-    text-align: right;
+    text-align: center;
     margin-bottom: 1cm;
     font-size: 200%;
     margin-right: 10%;
@@ -39,33 +39,87 @@ main{
     padding: 5px;
     text-align: justify;
     text-justify: inter-word;
+    width: 90%;
+    margin:auto;
 }
 
 .intro{
     margin-bottom: 10px;
+    text-align: justify;
+    text-indent: 2em;
 }
 
 .a{
+    display: block;
     margin-bottom: 10px;
+    border: 1px solid black;
+    height: 3em;
+    max-height: 3em;
+     padding-left: 5px;
+     padding-right: 5px;
+     box-sizing: border-box;
+     text-align: justify;
 }
 
 .b{
+    display: block;
     margin-bottom: 10px;
+    border: 1px solid black;
+    height: 10em;
+    max-height: 10em;
+     padding-left: 5px;
+     padding-right: 5px;
+     box-sizing: border-box;
+     text-align: justify;
 }
+
 .c{
+    display: block;
    margin-bottom: 10px; 
+   border: 1px solid black;
+   height: 8em;
+   max-height: 8em;
+    padding-left: 5px;
+     padding-right: 5px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+.d{
+    display: block;
+   border: 1px solid black;
+  height: 3em;
+   max-height: 2em;
+   margin-bottom: 10px;
+   padding-left: 5px;
+     padding-right: 5px;
+   text-align: justify;
+    
 }
 .seguro{
+    padding-top:0.05em;
+    display: block;
     border: 1px solid black;
-    margin: 5px;
-    padding:2px;
+    padding-left: 5px;
+     padding-right: 5px;
+    margin-bottom: 10px;
+    height:14em;
+    line-height: 1em;
+    text-align: justify;
+   box-sizing: border-box;
+
 }
 
 .proponente{
     border: 1px solid black;
-    margin: 5px;
-    padding:2px;
+    margin-bottom: 10px; 
+    box-sizing: border-box;
+    padding: 5px;
+    line-height: 2em;
+ 
 }
+
+
 
  h3{
     
@@ -82,13 +136,48 @@ main{
 
 .declaracao{
     margin-bottom: 5px;
+    text-align: justify;
+    text-indent: 3em;    
 }
 
 .assinatura{
-    text-align: center;
+    margin-top: 3em;
+    text-align: left;
+    line-height: 3em;
     
 }
 
 .data{
-    margin:20px;
+    margin:auto;
+    margin-top: 3em;
+    text-align: center;
+}
+
+.seguro p{
+    margin-top: 0.2em;
+}
+
+.seguro-titulo{
+    margin-top:1px;
+    text-align:left;
+    
+}
+
+.subtitulo h2{
+    margin:1em;
+}
+
+.numpag{
+    margin-right: auto ;
+    margin-left: auto ;
+    text-align: right;
+    font-size: 0.4em;
+    vertical-align: bottom;
+    line-height: 1em;
+}
+
+.branco{
+   height: 13em;
+   min-height: 13em;
+     
 }

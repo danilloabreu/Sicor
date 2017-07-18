@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 //função para cria select com quantidade e classe
 function htmlSelect ($qtd, $class){
@@ -35,7 +35,7 @@ function getValor ($quadra, $lote){
     $path = $_SERVER['DOCUMENT_ROOT'];
     require_once ($path.'/sicor/controller/php/conexao.php');
     $query =$conexao->stmt_init();  
-    $sql="SELECT lote.valor FROM sicor.lote WHERE lote.quadra='$quadra' AND lote.lote='$lote'";  
+    $sql="SELECT valor FROM lote WHERE quadra='$quadra' AND lote='$lote'";  
     //testa se o query está correto    
     if($query=$conexao->prepare($sql)){
         //passando variaveis para a query
@@ -198,7 +198,7 @@ function loteDisponivelArray($quadra){
     $path = $_SERVER['DOCUMENT_ROOT'];
     require_once ($path.'/sicor/controller/php/conexao.php');
     $query =$conexao->stmt_init();  
-    $sql="SELECT lote.lote FROM sicor.lote WHERE lote.quadra='$quadra' AND (lote.status=0 OR lote.status=1)";  
+    $sql="SELECT lote FROM lote WHERE quadra='$quadra' AND (status=0 OR status=1)";  
     //testa se o query está correto    
     if($query=$conexao->prepare($sql)){
         //passando variaveis para a query
