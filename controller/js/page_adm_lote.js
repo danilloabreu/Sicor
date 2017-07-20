@@ -7,12 +7,16 @@ $(document).ready(function(){
      var l=$(this).attr("linha");
      var quadra=$(".quadra[linha='"+l+"']").html();
      var lote=$(".lote[linha='"+l+"']").html();
+     var comprador='';
+     var corretor='';
      var r = confirm("Alterar a situação do Lote "+lote+" da Quadra "+quadra+" ? \nO lote ficará disponível após o comando");
       if (r == true){
                 //transmite os dados via post para o controlador de exclusão da tarefa
                 $.post("/sicor/controller/php/alterar_sit_lote.php",{
                 quadra: quadra,
                 lote: lote,
+                corretor:corretor,
+                comprador:comprador,
                 status: 0
                 },
                 function(data, status){
@@ -20,6 +24,8 @@ $(document).ready(function(){
                     alert("A situação foi alterada com sucesso");
                     $(".status[linha='"+l+"']").html("Disponível");
                     $('.quadro-resumo').load("/sicor/view/frame/resumo_venda.php");
+                    $('.comprador').val('');
+                    $('.corretor').val('');
                     }else{
                     alert("Problema no comando");
                     }
@@ -30,15 +36,21 @@ $(document).ready(function(){
     });//fim da função clique disponivel
     
 $(document).on('click','.vendido',function(){
-     var l=$(this).attr("linha");
-     var quadra=$(".quadra[linha='"+l+"']").html();
-     var lote=$(".lote[linha='"+l+"']").html();
-     var r = confirm("Alterar a situação do Lote "+lote+" da Quadra "+quadra+" ? \nO lote ficará vendido após o comando");
+    var l=$(this).attr("linha");
+    var quadra=$(".quadra[linha='"+l+"']").html();
+    var lote=$(".lote[linha='"+l+"']").html();
+    var comprador=$('.comprador').val();
+    var corretor=$('.corretor').val(); 
+    console.log(comprador);
+    console.log(corretor);
+    var r = confirm("Alterar a situação do Lote "+lote+" da Quadra "+quadra+" ? \nO lote ficará vendido após o comando");
       if (r == true){
                 //transmite os dados via post para o controlador de exclusão da tarefa
                 $.post("/sicor/controller/php/alterar_sit_lote.php",{
                 quadra: quadra,
                 lote: lote,
+                corretor:corretor,
+                comprador:comprador,
                 status: 2
                 },
                 function(data, status){
@@ -48,6 +60,7 @@ $(document).on('click','.vendido',function(){
                     $('.quadro-resumo').load("/sicor/view/frame/resumo_venda.php");
                     }else{
                     alert("Problema no comando");
+                    console.log(data);
                     }
             });//fim da função data,status 
             }else {
