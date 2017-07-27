@@ -1,5 +1,4 @@
 ﻿<?php
-
 $path = $_SERVER['DOCUMENT_ROOT'];
 require ($path.'/sicor/util/extenso.php');
 require_once ($path.'/sicor/util/mpdf/mpdf.php');
@@ -106,6 +105,9 @@ $saldoDevedorFormatado=$saldoDevedor;
 $valor=number_format($valor, 2, ',', '.');
 $seguroZurich=number_format($seguroZurich,2,',','.');
 $seguroPacaembu=number_format($seguroPacaembu,2,',','.');
+
+$entradaTotal=$entradaParcelaValor*$entradaParcelaNum;
+
 
 //se a condição for parcelado
 if($condicao!=='0'){
@@ -228,7 +230,8 @@ $html.="</div>";
     $html.="<p>(__) C. Opto pela contratação direta de apólice na modalidade PRESTAMISTA contra risco de morte e invalidez permanente vigente até a quitação do meu saldo devedor a ser apresentada em até dez dias da assinatura do Instrumento Particular de Compra e Venda do Imóvel.</p>";
     $html.="</div>";
     }
-$html.="<p class='numpag'>Página 1 de 2 - Gerado em $dataGeracao </p>";    
+//$html.="<p class='numpag'>Página 1 de 2 - Gerado em $dataGeracao </p>";    
+$html.="<p class='numpag'>Página 1 de 2</p>";    
 $html.="<div class='proponente titulo'>";
 $html.="<h3> Qualificação dos Proponentes</h3>";
 $html.="<p>Proponente:<span class='underline'></span><p>";
@@ -236,7 +239,7 @@ $html.="<p>Profissão:</p>";
 $html.="<p>Nascimento:</p>";
 $html.="<p>CPF:<span></p>";
 $html.="<p></span>RG:<span></span></p>";
-$html.="<p>Casado com:<span></span></p>";
+$html.="<p>Proponente:<span></span></p>";
 $html.="<p>Profissão:<span></p>";
 $html.="<p></span>Nascimento:<span></span></p>";
 $html.="<p>CPF:<span></span></p>";
@@ -254,7 +257,8 @@ $html.="<p>Corretor:<p>";
 $html.="</div>";
 $html.="<div class='branco'>";
 $html.="</div>";
-$html.="<p class='numpag'>Página 2 de 2 - Gerado em $dataGeracao </p>"; 
+$html.="<p class='numpag'>Página 2 de 2</p>"; 
+//$html.="<p class='numpag'>Página 2 de 2 - Gerado em $dataGeracao </p>"; 
 $html.="</main>"; 
 $html.="</body>";
 $html.="</html>";
