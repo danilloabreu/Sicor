@@ -242,4 +242,13 @@ function parcela($valor, $meses){
 }//fim da função parcela
 
 
+function retornaStatusJson(){
+    
+    
+    
+}
+
+
+
+
 ?>

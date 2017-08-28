@@ -106,6 +106,7 @@ $valor=number_format($valor, 2, ',', '.');
 $seguroZurich=number_format($seguroZurich,2,',','.');
 $seguroPacaembu=number_format($seguroPacaembu,2,',','.');
 
+<<<<<<< HEAD
 if($entradaTotal!=($entradaParcelaValor*$entradaParcelaNum)){
     $entradaParcelaValor=round($entradaParcelaValor,2);
     $entradaParcelaNum=round($entradaParcelaNum,2);
@@ -122,6 +123,9 @@ if($entradaTotal!=($entradaParcelaValor*$entradaParcelaNum)){
 }
 
 
+=======
+$entradaTotal=$entradaParcelaValor*$entradaParcelaNum;
+>>>>>>> 9927d6e247be247e87965247ceaaf7a1cf6486bb
 
 
 //se a condição for parcelado

@@ -54,8 +54,9 @@ $nivel=$_SESSION['nivel'];
                             $cab_adm.="<a href='#'>Administração </a>";
                             $cab_adm.="<ul>";
                             $cab_adm.="<li><a href='/sicor/view/page/page_adm_lote.php'>Administrar lotes</a></li>";                    
-                            $cab_adm.="</ul>";   
-                            $cab_adm.="</li>";
+                            $cab_adm.="<li><a href='/sicor/view/page/page_contrato.php'>Contrato</a></li>";                    
+                            $cab_adm.="</ul>";
+                            $cab_adm.="</li>";                            
                             echo $cab_adm;
                             }
                             ?>
