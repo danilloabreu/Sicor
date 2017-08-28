@@ -1,0 +1,1264 @@
+/**
+
+ *
+
+ * Theme: CMS
+
+ * Folha de Estilos Personalizados
+
+ *
+
+ * Author: Nova1
+
+ * Author URI: http://www.nova1.com.br
+
+ *
+
+**/
+
+
+
+/*******************************************************
+
+ * CORPO, ELEMENTOS HTML E TIPOGRAFIA
+
+*******************************************************/
+
+
+
+body {
+
+    color: #555;        
+
+    font-size: 15px;
+
+    font-family: 'Titillium Web', sans-serif;    
+
+    background: #FFF url('img/bg-conteudo.jpg') no-repeat center;
+
+    background-size: cover;
+
+    overflow-x: hidden;
+
+}
+
+
+
+img { max-width: 100%; height: auto; }
+
+p { margin: 0 0 20px; }
+
+
+
+h1, h2, h3 { color: #004621; }
+
+
+
+a, a:hover,
+
+a *, a:hover * {
+
+    transition: 0.3s;
+
+    opacity: 1;
+
+    cursor: pointer;
+
+}
+
+
+
+a:hover,
+
+a:hover * { opacity: 0.7; }
+
+
+
+/*******************************************************
+
+ * FORMULÁRIOS E BOTÕES
+
+*******************************************************/
+
+
+
+.form-control {
+
+    box-shadow: none;
+
+}
+
+
+
+.btn {
+
+    min-width: 120px;
+
+    border-radius: 5px;
+
+    text-transform: uppercase;
+
+    font-size: 16px;
+
+}
+
+
+
+.btn-default { border: 1px solid #FFF; background: transparent; color: #FFF }
+
+.btn-success { background: #1C5101; border-color: #1c5101; }
+
+
+
+/*******************************************************
+
+ * CLASSES E ELEMENTOS PRINCIPAIS
+
+*******************************************************/
+
+
+
+.nav-tabs { text-align: center; border: 0; margin-bottom: 0; }
+
+
+
+.nav-tabs li,
+
+.nav-tabs li.active {
+
+    display: inline-block;
+
+    margin: 0;
+
+}
+
+
+
+.nav-tabs li a, .nav-tabs li a:hover,
+
+.nav-tabs li a:active,
+
+.nav-tabs li a:focus,
+
+.nav-tabs li:hover a,
+
+.nav-tabs li:active a,
+
+.nav-tabs li:focus a {
+
+    border: 1px solid #ddd;
+
+    background-color: #fafaf9;
+
+    border-radius: 0;
+
+    font-size: 14px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    text-transform: uppercase;
+
+    color: #3d5664;
+
+    margin-right: 5px;
+
+}
+
+.nav-tabs li.active a {
+
+    background-color: #f8f7f6;
+
+    border-bottom: 1px solid #f8f7f6;
+
+}
+
+
+
+.aligncenter {
+
+    margin: 0 auto;
+
+    display: block;
+
+}
+
+
+
+.alignleft {
+
+    float: left;
+
+    margin: 0 20px 20px 0;
+
+}
+
+
+
+.alignright {
+
+    float: right;
+
+    margin: 0 0 20px 20px;
+
+}
+
+
+
+.serif { font-family: serif; }
+
+
+
+
+
+/*******************************************************
+
+ * CABECALHO
+
+*******************************************************/
+
+#header {
+
+    position: relative;
+
+    z-index: 999;    
+
+}
+
+
+
+#header-logo a {
+
+    display: inline-block;
+
+    padding: 30px;
+
+    background: #004621;
+
+    margin-bottom: 5px;
+
+    position: relative;
+
+}
+
+
+
+#main-nav {
+
+    background: none;
+
+    border: 0;
+
+    padding: 0;
+
+    margin: 0;
+
+    min-height: 0;
+
+}
+
+
+
+#main-menu {
+
+    border: 0;
+
+    padding: 0;
+
+}
+
+
+
+#main-nav {
+
+    background: #004621;
+
+    border: 0;
+
+    padding: 0;
+
+    margin: 0;
+
+    min-height: 0;
+
+    border-radius: 0;
+
+    position: relative;
+
+}
+
+
+
+#main-nav:before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+
+    left: 100%;
+
+    height: 50px;
+
+    background: #004621;
+
+}
+
+
+
+#main-nav:after {
+
+    content: "";
+
+    height: 1px;
+
+    width: 200%;
+
+    background: #004621;
+
+    position: absolute;
+
+    left: -8px;
+
+    bottom: -8px;
+
+}  
+
+
+
+#main-menu .menu-item a {
+
+    color: #FFF;
+
+    font-size: 14px;
+
+    text-transform: uppercase;
+
+}
+
+
+
+#header-social {
+
+    text-align: right;
+
+    margin-right: -20px;
+
+}
+
+
+
+#header-social a {
+
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    color: #3d5664;
+
+}
+
+
+
+#header-logo a:before {
+
+    content: "";
+
+    height: 215px;
+
+    width: 1px;
+
+    background: #004621;
+
+    position: absolute;
+
+    left: -8px;
+
+    top: 0;
+
+}
+
+
+
+
+
+.top-left:after {
+
+    content: "";
+
+    width: 1px;
+
+    height: 100%;
+
+    background: #004621;
+
+    position: absolute;
+
+    right: -8px;
+
+    top: 216px;
+
+}
+
+
+
+/*******************************************************
+
+ * RODAPE
+
+*******************************************************/
+
+
+
+#footer {
+
+    padding: 100px 0 0;
+
+    border-bottom: 50px solid #016938;
+
+    color: #FFF;
+
+    background: #004621 url('img/gradiente-verde.png') no-repeat center;
+
+    background-size: cover;
+
+    background-attachment: fixed;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+
+div#footer-logo {
+
+    background: #016938;
+
+    padding: 20px;
+
+    max-width: 160px;
+
+}
+
+
+
+#footer-info { text-align: center; }
+
+#footer-info .info-block { display: inline-block; margin: 0 10px; }
+
+.footer-column a { color: #FFF; text-decoration: none; }
+
+.footer-column p.lead {
+
+    font-family: serif;
+
+    text-transform: uppercase;
+
+    font-size: 18px;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+.footer-column {
+
+    border: 1px solid #016938;
+
+    padding: 0 10px;
+
+    height: 250px;
+
+    margin-bottom: 30px;
+
+    position: relative;
+
+}
+
+
+
+.footer-column.first:before {
+
+    background: #016938;
+
+    height: 1px;
+
+    width: 1600px;
+
+    content: "";
+
+    position: absolute;
+
+    right: 105%;
+
+    top: 80px;
+
+}
+
+
+
+.footer-column.last:after {
+
+    background: #016938;
+
+    height: 1px;
+
+    width: 1600px;
+
+    content: "";
+
+    position: absolute;
+
+    left: 105%;
+
+    top: 80px;
+
+}
+
+div#link-adm a { color: #FFF; }
+div#link-adm {
+    position: absolute;
+    right: 100px;
+    bottom: 0;
+    background: #016938;
+    color: #FFF;
+    display: block;
+    padding: 10px;
+}
+
+/*******************************************************
+
+ * CONTEÚDO
+
+*******************************************************/
+
+
+
+#main article.content { min-height: 500px; }
+
+
+
+.top-left {
+
+    margin-top: -209px;
+
+    position: relative;
+
+    z-index: 0;
+
+}
+
+
+
+.top-right { padding-top: 100px; }
+
+
+
+
+/*home*/
+
+
+
+#bairro {
+
+    color: #FFF;
+
+    background: #004621 url('img/gradiente-verde.png') no-repeat center;
+
+    position: relative;
+
+    z-index: 4;
+
+    box-shadow: 0 10px 150px #000;
+
+}
+
+
+
+#bairromapa { margin-top: -80px; }
+
+
+
+#barra {
+
+    padding: 20px 0;
+
+    margin-top: 50px;
+
+    background: #113322;
+
+}
+
+
+
+#caixas { 
+
+    padding: 100px 0; 
+
+    position: relative;
+
+    z-index: 3;
+
+    box-shadow: 0 10px 100px #000;
+
+}
+
+
+
+#caixas .caixa {
+
+    padding: 8px 8px 0;
+
+    border: 1px solid #004621;
+
+    margin: 20px -10px 20px;
+
+    position: relative;
+
+    font-size: 14px;
+
+}
+
+
+
+#caixas .caixa-conteudo { height: 300px; }
+
+#caixas .caixa-img {
+
+    height: 140px;
+
+    margin: 0px -9px;
+
+    background-size: cover;
+
+    background-position: center;
+
+    margin-top: 30px;
+
+}
+
+
+
+#btn-caixas {
+
+    max-width: 570px;
+
+    display: block;
+
+    margin: 0 auto;
+
+}
+
+
+
+#btn-caixas .btn { display: block; }
+
+
+
+div#footer-mapa {
+
+    background: transparent url('img/loteamento.jpg') no-repeat center -50px;
+
+    /*background-attachment: fixed;*/
+
+    background-size: contain;
+
+    height: 300px;
+
+    margin-top: -100px;
+
+    margin-bottom: 30px;
+
+}
+
+
+
+/*sliders*/
+
+
+
+#carousel-slides { 
+
+    margin-top: -209px;     
+
+    box-shadow: 0 10px 150px #000;
+
+    z-index: 3;
+
+}
+
+
+
+#carousel-slides .slide-img {
+
+    height: 1100px;
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+}
+
+
+
+#carousel-slides .top-left:after { top: 425px; }
+
+#carousel-slides .top-right { padding-top: 280px; }
+
+
+
+#carousel-slides .carousel-indicators {
+
+    height: 50px;
+
+    top: 800px;
+
+    width: 100%;
+
+    margin: 0;
+
+    left: 20px;
+
+    right: 0;
+
+    text-align: left;
+
+}
+
+
+
+#carousel-slides .carousel-indicators li { background-color: #93979A; }
+
+#carousel-slides .carousel-indicators .active {
+
+    background: #004621;
+
+    border: 2px solid #004621;
+
+}
+
+
+
+/*loteamento*/
+
+
+
+#mapas {
+
+    padding-top: 350px;
+
+    /*background: url(img/loteamento.png) no-repeat center -170px;*/
+    background: url(img/loteamento.jpg) no-repeat center -60px;
+
+    box-shadow: 0 10px 150px #000;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+
+
+
+#carousel-quadras ol.carousel-indicators {
+
+    position: relative;
+
+    margin: 0;
+
+    width: 100%;
+
+    left: 0;
+
+    text-align: left;
+
+}
+
+
+
+#carousel-quadras .carousel-indicators li {
+
+    width: auto;
+
+    height: auto;
+
+    text-indent: 0;
+
+    background: none;
+
+    border: 0;
+
+    margin-right: 20px;
+
+    padding-left: 20px;
+
+    position: relative;
+
+}
+
+
+
+#carousel-quadras .carousel-indicators li.active:before {
+
+    background: #113322;
+
+    border-color: #113322;
+
+}
+
+
+
+#carousel-quadras .carousel-indicators li:before {
+
+    content: "";
+
+    width: 15px;
+
+    height: 15px;
+
+    border-radius: 100%;
+
+    border: 1px solid #ddd;
+
+    position: absolute;
+
+    left: 0;
+
+    top: 2px;
+
+}
+
+
+
+div#mapas-container {
+
+    background: #113322;
+
+    color: #FFF;
+
+    margin-top: 150px;
+
+    padding-bottom: 50px;
+
+}
+
+
+
+#mapas .carousel-inner {
+
+    margin-top: -150px;
+
+}
+
+
+
+#mapas .legenda {
+
+    float: right;
+
+    max-width: 380px;
+
+    text-align: justify;
+
+    margin-right: 100px;
+
+    margin-bottom: 50px;
+
+    font-size: 18px;
+
+}
+
+
+
+#galeria {
+
+    padding: 100px 0 100px;
+
+    color: #FFF;
+
+    background: #113322;
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+
+#galeria h2 {
+
+    color: #FFF;
+
+    text-align: center;
+
+    font-family: serif;
+
+    font-size: 42px;
+
+    margin: 20px 0 50px;
+
+}
+
+
+
+.page-template-modelo-loteamento #footer {
+
+    box-shadow: inset 0 40px 100px #111;
+
+}
+
+
+
+#galeria .gallery-item img {
+
+    border: 2px solid #113322;
+
+}
+
+
+
+/*diferenciais*/
+
+
+
+div#cover {
+
+    height: 765px;
+
+    /*background: url('img/example/slides/2.jpg') no-repeat center;*/
+    background: url('img/diferenciais/img-diferenciais.jpg') no-repeat center;
+
+    background-size: cover;
+
+}
+
+
+
+#diferenciais .top-right {
+
+    margin-left: -14px;
+
+    padding-top: 67px;
+}
+
+
+
+.box {
+
+    max-width: 300px;
+
+    border: 2px solid green;
+
+    padding: 0 10px;
+
+    margin: 10px 0 0;
+
+    height: 253px;
+
+}
+
+
+
+.box-img {margin-top: 10px;}
+
+
+
+.top-left .box, .top-left .box-img {
+
+    float: right;
+
+}
+
+
+
+/*contato*/
+
+
+
+div#form-contato {
+
+    max-width: 380px;
+
+    margin-top: 20px;
+
+}
+
+
+
+#form-contato .form-group { margin-bottom: 5px; }
+
+#mensagem { height: 100px; }
+
+
+
+#form-contato .checkbox { margin: 3px 0; }
+
+#form-contato label { font-size: 13px; }
+
+
+
+#form-contato span.ajax-loader {
+
+    float: left;
+
+    margin-top: 10px !important;
+
+}
+
+
+
+/*******************************************************
+
+ * AJUSTES RESPONSIVOS
+
+*******************************************************/
+
+
+
+@media( max-width: 768px ) {
+
+	.top-left {
+	    margin: 10px -5px;
+	    max-height: 480px;
+	    overflow: hidden;
+	}
+
+	.top-right { padding: 0; }
+
+    div#header-logo {
+        position: relative;
+        z-index: 2;
+        margin: 10px 0 0;
+
+    }   
+
+    #header-logo a:before { display: none; }
+    #header-logo a {
+	    display: inline-block;
+	    padding: 0px;
+	}
+
+    #header-logo img { max-width: 190px; transition: 0s; }
+
+    .home nav#main-nav {
+        position: relative;
+        background: transparent;
+        width: 100%;
+        left: 0%;
+    }
+
+
+    #main-nav:after,
+    #main-nav:before { display: none; }
+
+    .home #main-menu .navbar-nav {
+        text-align: center;
+        margin: 0;
+    }
+
+
+    #main-menu .menu-item { display: block; }
+    #main-menu .menu-item a { display: block; text-align: left; }
+
+    div#homeslider-mobile {
+        min-height: 480px;
+        background: #ccc;
+    }
+
+    #carousel-slides { margin-top: -5px; }
+    #carousel-slides .top-left { margin: 0; }
+    #carousel-slides .top-left:after { display: none; }
+    #carousel-slides .slide-img { height: 480px; }
+
+    #carousel-slides .top-right { padding: 15px 15px 100px; }
+    #carousel-slides .carousel-indicators {
+	    top: 840px;
+	    left: 30px;
+	}
+
+    #brand {
+
+        max-width: 80%;
+
+        margin: 0 10% 50px;
+
+        padding: 50px 20px 0;
+
+    }
+
+
+    #gallery .gallery-item {
+
+        width: 50% !important;
+
+        margin-bottom: 0;
+
+    }
+
+
+    #caixas .caixa { margin: 20px; }
+
+    #footer-logo { text-align: center; } 
+    .footer-column.last:after { display: none; }
+    div#footer-mapa { height: 120px; }
+
+    #mapas .legenda {
+	    float: none;
+	    max-width: 100%;
+	    margin: 30px 0 0;
+	}
+
+	#galeria .gallery br { display: none; }
+	#galeria .gallery .gallery-item {
+	    width: 50%;
+	    margin: 0;
+	}
+
+	#diferenciais .top-right {
+	    margin: 20px;
+	    padding: 0;
+	}
+
+	.box {
+	    max-width: 100%;
+	    height: auto;
+	}
+
+	div#cover { height: 480px; }
+
+	div#form-contato { margin-bottom: 20px; }
+}
+
+
+@media( min-width: 768px ) and (max-width: 991px ) {
+
+    #main-menu { margin: 0 -20px; }
+
+    #main-menu .menu-item { float: none; display: block; }
+
+    #main-menu .menu-item a { padding: 6px 5px; }
+
+    #header-social a { padding: 5px; }
+
+
+
+    #main-nav button.navbar-toggle { margin-right: -15px; }
+
+}
+
+
+
+@media (max-width: 991px) {
+
+  .navbar-header {
+
+      float: none;
+
+  }
+
+  .navbar-left,.navbar-right {
+
+      float: none !important;
+
+  }
+
+  .navbar-toggle {
+
+      display: block;
+
+  }
+
+  .navbar-collapse {
+
+      border-top: 1px solid transparent;
+
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+
+  }
+
+  .navbar-fixed-top {
+
+      top: 0;
+
+      border-width: 0 0 1px;
+
+  }
+
+  .navbar-collapse.collapse {
+
+      display: none!important;
+
+  }
+
+  .navbar-nav {
+
+      float: none!important;
+
+      margin-top: 7.5px;
+
+  }
+
+  .navbar-nav>li {
+
+      float: none;
+
+  }
+
+  .navbar-nav>li>a {
+
+      padding-top: 10px;
+
+      padding-bottom: 10px;
+
+  }
+
+  .collapse.in{
+
+      display:block !important;
+
+  }
+
+
+
+    #main-menu .navbar-nav {
+
+        text-align: right;
+
+    }
+
+
+
+    .home #main-menu .navbar-nav {
+
+	    text-align: right;
+
+	}
+
+
+
+}
+
+
+
+@media( max-width: 767px ) {
+
+	#main-menu .navbar-nav { text-align: center; }
+
+}
+
+@media( max-width: 768px ) {
+	#header {
+	    position: relative;
+	    z-index: 999;
+	    background: #004621;
+	    text-align: center;
+	}
+}

@@ -17,6 +17,9 @@ $nivel=$_SESSION['nivel'];
                     <ul class="menu">
                             <li>
                                 <a href="/sicor/view/pagina_inicial.php">Dashboard</a>
+								<ul>
+									<li><li><a target="_blank" href="/sicor/svg/mapa.php">Espelho de Vendas (Beta)</a></li>
+								</ul>
                             </li>
                             <?php if(false){
                             $cab_reserva="<li><a href='#'>Reservas</a>";
@@ -33,9 +36,10 @@ $nivel=$_SESSION['nivel'];
                                 <ul>
                                 <li><a target="_blank" href="/sicor/files/mapa.pdf">Mapa em PDF</a></li>
                                 <li><a href="/sicor/files/PropostaAvulsa.dotx">Proposta Avulsa</a></li>
-                                <li><a href="/sicor/files/cnpj_spe.pdf">Cartão CNPJ SPE</a></li>
-                                <li><a href="#">Aprovação Graprohab</a></li>
-                                <li><a href="#">Registro da Incorporação</a></li>
+                                <li><a target="_blank" href="/sicor/files/cnpj_spe.pdf">Cartão CNPJ SPE</a></li>
+                                <li><a target="_blank" href="/sicor/files/graprohab.pdf">Aprovação Graprohab</a></li>
+                                <li><a target="_blank" href="/sicor/files/registro.pdf">Registro da Incorporação</a></li>
+								 <li><a target="_blank" href="/sicor/files/alvara.pdf">Alvará de Obras</a></li>
                                 </ul>
                             </li>
                             <?php 

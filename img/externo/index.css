@@ -1,0 +1,41 @@
+body{
+    background-image: url("/sicor/img/fundo_2.jpg");  
+}
+
+.swMain{ 
+    margin-left: 20%;
+}
+
+* { font-family: Verdana; font-size: 96%; }
+label { display: block; margin-top: 10px; }
+label.error { float: none; color: red; margin: 0 .5em 0 0; vertical-align: top; font-size: 10px }
+p { clear: both; }
+.submit { margin-top: 1em; }
+em { font-weight: bold; padding-right: 1em; vertical-align: top; }
+
+
+
+form{ 
+    margin-top: 10%;
+    height: 40%;
+    width: 60%;
+    margin-left: auto;
+    margin-right:auto;
+    
+}
+
+legend{
+    text-align: center;
+    
+}
+
+
+control-label{
+    
+    padding-bottom: 50px;
+}
+
+.form-horizontal .form-group{
+    
+    text-align: center;
+}

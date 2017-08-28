@@ -29,3 +29,11 @@ table{
 .content{
     white-space: nowrap;
 }
+
+.cel{
+    background-color: blue;
+}
+
+.cempre{
+    background-color: grey;
+}

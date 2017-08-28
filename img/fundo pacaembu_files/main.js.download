@@ -1,0 +1,164 @@
+/**
+
+ * Scripts de experiência front-end
+
+ *
+
+ * Author: Nova1 - Sites, Web & Design
+
+ * Author URI: http://www.nova1.com.br
+
+**/
+
+
+
+(function($) {    
+
+    $(document).ready(function() {
+
+        $('[data-toggle="tooltip"]').tooltip();
+
+
+
+        // Padrão de Validações
+
+        // $('.input-phone').mask( '(00) 0000-0000' );
+
+        // $('.input-celphone').mask( '(00) 00000-0000' );
+
+        // Padrão de Validações
+	    jQuery('.input-phone, .input-celphone').mask( '(00) 0000-00009' ).blur(function(event) {
+		   if(jQuery(this).val().length == 15){ // Celular com 9 dígitos + 2 dígitos DDD e 4 da máscara
+		      jQuery(this).mask('(00) 00000-0009');
+		   } else {
+		      jQuery(this).mask('(00) 0000-00009');
+		   }
+		});
+
+        $('.input-cep').mask('00000-000');
+
+        $('.input-date').mask( '00/00/0000' );
+
+        $('.input-money').mask('000.000.000', {reverse: true});
+
+        $('.input-money2').mask('000.000.000,00', {reverse: true});
+
+
+
+        $('.input-cpf').mask('000.000.000-00');
+
+        $('.input-cnpj').mask('00.000.000/0000-00');     
+
+
+
+        window.onscroll = function() {
+
+            var scrollY = window.scrollY;
+
+            var ww = window.innerWidth;
+
+
+
+            if( ww > 900 ) {
+
+                if( scrollY > 0 ) { $('body').addClass('scrolled'); }
+
+                else { $('body').removeClass('scrolled'); }                
+
+            }
+
+        }    
+
+
+
+        // imagesLoaded( 'body', function() {   
+        setTimeout( function(){
+            new WOW().init();
+            $('.carregando-geral').fadeOut();   
+        }, 500 );
+
+        // });    
+
+    });    
+
+})(jQuery);
+
+
+
+function resizeHomeSlider() {
+
+
+
+    var hh = jQuery('#header').height();
+
+    var wh = window.innerHeight - hh;
+
+    // if( window.innerWidth < 900 ) wh = window.innerHeight - 72;
+
+
+
+    jQuery('#homeslider .sliderimage').css('height', wh+'px');
+
+}
+
+
+
+// detecta se é uma determinada pá´gina
+
+function is_page( p ) {
+
+     var url = window.location.toString();
+
+    if( ( (url.indexOf( p ) > 0 ) ) ) return true;
+
+    return false;
+
+}
+
+
+
+// detecta se é a home do site
+
+function is_home() {
+
+    var url = window.location.toString();
+
+    if( (url.indexOf( 'home' ) > 0 ) || ( url.indexOf( '?page=' ) < 0 ) ) return true;
+
+    return false;
+
+}
+
+
+
+function current_browser(){
+
+  var isChromium = window.chrome,
+
+      winNav = window.navigator,
+
+      vendorName = winNav.vendor,
+
+      isOpera = winNav.userAgent.indexOf("OPR") > -1,
+
+      isIEedge = winNav.userAgent.indexOf("Edge") > -1,
+
+      isIOSChrome = winNav.userAgent.match("CriOS");
+
+
+
+  if(isIOSChrome){
+
+     return 'chrome';
+
+  } else if(isChromium !== null && isChromium !== undefined && vendorName === "Google Inc." && isOpera == false && isIEedge == false) {
+
+     return 'chrome';
+
+  } else { 
+
+     return 'not chrome';
+
+  }
+
+}

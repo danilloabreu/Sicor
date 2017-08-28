@@ -41,6 +41,12 @@ $sql="SELECT quadra, lote, area, status,comprador,corretor FROM lote WHERE quadr
                 case 2: 
                     $status="vendido";
                     break;
+                case 3: 
+                    $status="cel";
+                    break;
+                case 4: 
+                    $status="cempre";
+                    break;
             }
                 
                 $tabela.="<tr class='$status'";

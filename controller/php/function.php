@@ -196,7 +196,7 @@ function loteDisponivelArray($quadra){
     //array_push($lotes,1,2,3,4,5);
     
     $path = $_SERVER['DOCUMENT_ROOT'];
-    require_once ($path.'/sicor/controller/php/conexao.php');
+    require($path.'/sicor/controller/php/conexao.php');
     $query =$conexao->stmt_init();  
     $sql="SELECT lote FROM lote WHERE quadra='$quadra' AND (status=0 OR status=1)";  
     //testa se o query está correto    

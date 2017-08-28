@@ -1,0 +1,66 @@
+.dados{
+    margin-top: 10px;
+    margin-left: 2px;
+    margin-bottom: 2px;
+    vertical-align: top;
+    display: inline-block;
+    width: auto;
+    /*overflow: auto;*/
+      /*float: left;*/
+}
+
+table th,tr,td{
+    border: 1px solid black;
+    padding: 2px;
+    text-align: center;
+}
+
+.lote td{
+    vertical-align: middle;
+}
+.entrada{
+    background-color: #b5b5b5
+}
+button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+.borda{
+    border: 1px solid black;
+     border-radius: 15px;;
+    display: inline-block;
+    padding: 20px;
+    text-align: center;
+    margin: 5px;
+    }
+
+.content{
+    text-align: center;
+}
+
+table th{
+    background-color: #ffa;
+}
+
+.gerarproposta{
+    
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    
+    text-decoration: none;
+    color: initial;
+    margin-top: 10px;
+    padding: 2px;
+    
+}
+
+body{
+    background-image: url("/sicor/img/fundo_2.jpg");  
+}
+
+.borda{
+    background-color: #dce0e8;
+}

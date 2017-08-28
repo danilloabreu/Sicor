@@ -135,7 +135,7 @@ $(document).on('change','.fin-numparcela',function(){
     var b=getEntradaValor();
     
     var vendaValor=toFloat($(".lote-valornegociacao").val());
-    var entradaValor=toFloat($(".entrada-total").html());             
+    var entradaValor=getEntradaValor();             
     var entradanumparcela=$(".fin-numparcela").val();
 
 //chamada da função atualizaEmolumento para atualizar os campos           
